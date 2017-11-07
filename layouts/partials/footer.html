@@ -1,6 +1,12 @@
 
+
 				<!-- Footer -->
 					<footer id="footer">
+                  <ul class="icons">
+                  {{ range .Site.Params.social }}
+                     <li><a href="{{ .link | safeURL }}" class="icon fa-{{ .icon }}"><span class="label">{{ .medium }}</span></a></li>
+                  {{ end }}
+                  </ul>
 						<p class="copyright">&copy; {{ .Site.Params.copyright }}. Design: <a href="https://html5up.net">HTML5 UP</a>. Powered by <a href="https://www.gohugo.io/">Hugo.</a></p>
 					</footer>
 
